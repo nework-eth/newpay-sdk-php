@@ -1,5 +1,5 @@
 {
-  "name": "newpay/newpay-sdk",
+  "name": "newpay/newpay",
   "type": "library",
   "description": "NewPay sdk php 版本，用于生成公钥私钥和计算签名",
   "keywords": [
