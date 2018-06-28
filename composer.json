@@ -1,0 +1,21 @@
+{
+  "name": "newpay/newpay-sdk",
+  "type": "library",
+  "description": "NewPay sdk php 版本，用于生成公钥私钥和计算签名",
+  "keywords": [
+    "php",
+    "newpay",
+    "signature",
+    "security",
+    "RSA"
+  ],
+  "require": {
+    "php": ">=5.3.3",
+    "phpseclib/phpseclib": "~2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "newpay-sdk\\": "newpay-sdk/"
+    }
+  }
+}
