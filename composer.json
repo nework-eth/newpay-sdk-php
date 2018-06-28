@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "newpay-sdk\\": "newpay-sdk/"
+      "newpay\\": "newpay/"
     }
   }
 }
