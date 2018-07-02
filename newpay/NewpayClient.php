@@ -9,12 +9,14 @@
  */
 namespace newpay;
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 use phpseclib\Crypt\RSA;
 
 class NewpayClient {
     function getSign($privateKey, $parameterArray = array()) {
-        sort($parameterArray);
+        usort($parameterArray, function ($a, $b) {
+            return strcmp($a, $b);
+        });
         $data = implode($parameterArray);
         if (empty($data)) {
             echo "数据异常！";
@@ -46,7 +48,9 @@ class NewpayClient {
     }
 
     function verify($publicKey, $sign, $parameterArray = array()) {
-        sort($parameterArray);
+        usort($parameterArray, function ($a, $b) {
+            return strcmp($a, $b);
+        });
         $data = implode($parameterArray);
         if (empty($data)) {
             echo "数据异常！";
