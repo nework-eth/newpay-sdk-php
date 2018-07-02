@@ -9,7 +9,7 @@
  */
 namespace newpay;
 
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 use phpseclib\Crypt\RSA;
 
 class NewpayClient {
