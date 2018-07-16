@@ -59,7 +59,9 @@ class NewpayClient {
             echo "公钥异常！";
             return false;
         }
-        $p_key_id = openssl_get_publickey($publicKey);
+        $rsa = new RSA();
+        $rsa->loadKey($publicKey);
+        $p_key_id = openssl_get_publickey($rsa);
         if (empty($p_key_id)) {
             echo "公钥异常！";
             return false;
